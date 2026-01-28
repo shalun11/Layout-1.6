@@ -1,0 +1,170 @@
+[class*='__container'] {
+  padding: 0 16px;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet) {
+    padding: 0 24px;
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0 34px;
+    margin-bottom: 50px;
+  }
+}
+
+.wrapper {
+  @media (min-width: $desktop) {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.mobile-novisible {
+  display: none !important;
+
+  @media (min-width: $tablet) {
+    display: flex !important;
+  }
+}
+.btn {
+  min-width: 40px;
+  height: 40px;
+  background-color: $accentColor;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $hoverButtonColor;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.96);
+  width: 100%;
+  height: 100%;
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  @media (min-width: $desktop) {
+    z-index: 6;
+  }
+}
+
+a {
+  transition: color 0.3s ease;
+  &:hover {
+    color: $secondColor;
+  }
+}
+
+.title-h1 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 143%;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transform: translateX(-16px);
+
+  @media (min-width: $tablet) {
+    transform: translateX(-24px);
+  }
+
+  @media (min-width: $desktop) {
+    transform: translateX(-34px);
+  }
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 40px;
+    background-color: $thirdColor;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+
+.title-h2 {
+  line-height: 150%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: $secondColor;
+  width: 100%;
+  background: linear-gradient(40deg, #f8f8f8 0%, #fff 100%);
+  padding: 16px;
+
+  @media (min-width: $tablet) {
+    padding-left: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    padding-left: 34px;
+  }
+}
+
+.text {
+  font-size: 14px;
+  line-height: 143%;
+  letter-spacing: 0.01em;
+  margin-bottom: 16px;
+
+  p:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+.read {
+  max-height: 360px !important;
+}
+
+.read-more {
+  &__button {
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    img {
+      transition: rotate 0.3s ease;
+    }
+
+    &.read {
+      img {
+        rotate: 180deg;
+      }
+    }
+
+    &:hover {
+      color: $secondColor;
+    }
+  }
+}
+
+.swiper-pagination-bullets {
+  bottom: 0 !important;
+}
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+}
+.swiper-pagination-bullet-active {
+  background-color: #b5b6bc;
+}

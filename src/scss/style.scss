@@ -1,17 +1,13 @@
-$bgColor: #24292e;
-$text: #fff;
+@import './base/fonts.scss';
+@import './base/variations.scss';
+@import './base/null.scss';
+@import './base/base.scss';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
-}
+@import './blocks/burger.scss';
+@import './blocks/header.scss';
+@import './blocks/menu.scss';
+@import './blocks/hero.scss';
+@import './blocks/repair.scss';
+@import './blocks/price.scss';
+@import './blocks/footer.scss';
+@import './blocks/modal.scss';

@@ -1,0 +1,50 @@
+.burger {
+  z-index: 10;
+  cursor: pointer;
+  position: relative;
+
+  @media (min-width: $desktop) {
+    display: none;
+  }
+}
+.burger span {
+  position: absolute;
+  background-color: #ffffff;
+  height: 2px;
+  width: 10px;
+  left: 11px;
+  transition: all 0.3s ease 0s;
+}
+.burger::before,
+.burger::after {
+  position: absolute;
+  content: '';
+  background-color: #ffffff;
+  height: 2px;
+  transition: all 0.3s ease 0s;
+}
+.burger::before {
+  width: 18px;
+  top: 12px;
+}
+.burger::after {
+  width: 14px;
+  bottom: 12px;
+  left: 11px;
+}
+.burger.active::before,
+.burger.active::after {
+  width: 22px;
+  left: 9px;
+}
+.burger.active::before {
+  transform: rotate(45deg);
+  top: 19px;
+}
+.burger.active::after {
+  transform: rotate(-45deg);
+  bottom: 19px;
+}
+.burger.active span {
+  transform: scale(0);
+}
